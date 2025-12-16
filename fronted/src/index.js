@@ -26,13 +26,21 @@ function addCSSLink(href, id) {
 // Using process.env.PUBLIC_URL to reference public folder assets
 const publicUrl = process.env.PUBLIC_URL || '';
 
-addCSSLink(`${publicUrl}/assets/css/style.css`, 'main-style-css');
-addCSSLink(`${publicUrl}/assets/plugins/icons/feather/feather.css`, 'feather-icons-css');
-addCSSLink(`${publicUrl}/assets/css/bootstrap-datetimepicker.min.css`, 'datetimepicker-css');
-addCSSLink(`${publicUrl}/assets/plugins/select2/css/select2.min.css`, 'select2-css');
-addCSSLink(`${publicUrl}/assets/plugins/owlcarousel/owl.carousel.min.css`, 'owlcarousel-css');
-addCSSLink(`${publicUrl}/assets/plugins/owlcarousel/owl.theme.default.min.css`, 'owlcarousel-theme-css');
-addCSSLink(`${publicUrl}/assets/plugins/daterangepicker/daterangepicker.css`, 'daterangepicker-css');
+// Ensure paths work in both development and production
+const getAssetPath = (path) => {
+  if (publicUrl) {
+    return `${publicUrl}${path.startsWith('/') ? path : '/' + path}`;
+  }
+  return path.startsWith('/') ? path.substring(1) : path;
+};
+
+addCSSLink(getAssetPath('/assets/css/style.css'), 'main-style-css');
+addCSSLink(getAssetPath('/assets/plugins/icons/feather/feather.css'), 'feather-icons-css');
+addCSSLink(getAssetPath('/assets/css/bootstrap-datetimepicker.min.css'), 'datetimepicker-css');
+addCSSLink(getAssetPath('/assets/plugins/select2/css/select2.min.css'), 'select2-css');
+addCSSLink(getAssetPath('/assets/plugins/owlcarousel/owl.carousel.min.css'), 'owlcarousel-css');
+addCSSLink(getAssetPath('/assets/plugins/owlcarousel/owl.theme.default.min.css'), 'owlcarousel-theme-css');
+addCSSLink(getAssetPath('/assets/plugins/daterangepicker/daterangepicker.css'), 'daterangepicker-css');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

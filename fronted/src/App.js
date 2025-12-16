@@ -5,6 +5,8 @@ import Base from "./Pages/Base";
 import './App.css';
 import Home from "./Pages/Home";
 import Sidebar from "./Pages/Sidebar";
+import Tbase from "./teacher-portal/Tbase";
+import TDashboard from "./teacher-portal/TDashboard";
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           {/* Web Routes */}
           <Route path='/' element={<Base><Home/></Base>} />
           <Route path='/side-bar' element={<Base><Sidebar/></Base>} />
+                    <Route path='/teacher-portal' element={<Base><TDashboard/></Base>} />
+ 
 
 
           <Route path='*' element={<PageNotFound404 />} />
