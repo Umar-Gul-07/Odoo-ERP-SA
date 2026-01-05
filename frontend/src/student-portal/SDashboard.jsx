@@ -13,11 +13,7 @@ const svgRef =  React.useRef(null);
 
 
   return (
-    <div>
-      
-
-      <div className="page-wrapper" style={{ minHeight: 1056 }}>
-  <div className="content">
+    <div className="content" style={{ overflowX: 'hidden', width: '100%' }}>
     {/* Page Header */}
     <div className="d-md-flex d-block align-items-center justify-content-between mb-3">
       <div className="my-auto mb-2">
@@ -35,13 +31,13 @@ const svgRef =  React.useRef(null);
       </div>
     </div>
     {/* /Page Header */}
-    <div className="row">
-      <div className="col-12 col-lg-8 col-xxl-8 d-flex">
-        <div className="row flex-fill">
+    <div className="row g-3" style={{ margin: 0, width: '100%', maxWidth: '100%' }}>
+      <div className="col-12 col-lg-8 col-xxl-8 d-flex" style={{ maxWidth: '100%', overflow: 'hidden' }}>
+        <div className="row flex-fill" style={{ width: '100%', margin: 0 }}>
           {/* Profile */}
-          <div className="col-12 col-md-6 col-xl-6 d-flex">
-            <div className="flex-fill">
-              <div className="card bg-dark position-relative">
+          <div className="col-12 col-md-6 col-xl-6 d-flex" style={{ maxWidth: '100%', overflow: 'hidden' }}>
+            <div className="flex-fill" style={{ width: '100%', maxWidth: '100%' }}>
+              <div className="card bg-dark position-relative" style={{ width: '100%', maxWidth: '100%' }}>
                 <div className="card-body">
                   <div className="d-flex align-items-center row-gap-3 mb-3 flex-wrap">
                     <div className="avatar avatar-xxl rounded flex-shrink-0 me-3 mb-2 mb-md-0">
@@ -107,6 +103,7 @@ const svgRef =  React.useRef(null);
                           <img
                             src="assets/img/parents/parent-07.jpg"
                             alt="Profile"
+                            className="img-fluid"
                           />
                         </span>
                         <div>
@@ -132,6 +129,7 @@ const svgRef =  React.useRef(null);
                           <img
                             src="assets/img/parents/parent-02.jpg"
                             alt="Profile"
+                            className="img-fluid"
                           />
                         </span>
                         <div>
@@ -157,6 +155,7 @@ const svgRef =  React.useRef(null);
                           <img
                             src="assets/img/profiles/avatar-17.jpg"
                             alt="Profile"
+                            className="img-fluid"
                           />
                         </span>
                         <div>
@@ -179,7 +178,7 @@ const svgRef =  React.useRef(null);
           </div>
           {/* /Profile */}
           {/* Attendance */}
-          <div className="col-12 col-md-6 col-xl-6 d-flex">
+          <div className="col-12 col-md-6 col-xl-6 d-flex" style={{ maxWidth: '100%' }}>
             <div className="card flex-fill">
               <div className="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
                 <h4 className="card-title mb-0">Attendance</h4>
@@ -232,12 +231,12 @@ const svgRef =  React.useRef(null);
                       </div>
                     </div>
                   </div>
-                  <div className="text-center">
-                    <div id="attendance_chart" style={{ minHeight: 255 }}>
+                  <div className="text-center" style={{ width: '100%', overflow: 'hidden' }}>
+                    <div id="attendance_chart" style={{ minHeight: 255, width: '100%', overflow: 'hidden' }}>
                       <div
                         id="apexchartsmkg8bufr"
                         className="apexcharts-canvas apexchartsmkg8bufr apexcharts-theme-light"
-                        style={{ width: '100%', maxWidth: 818, height: 255, margin: '0 auto' }}
+                        style={{ width: '100%', maxWidth: '100%', height: 255, margin: '0 auto' }}
                       >
                         <svg
                         ref= {svgRef}
@@ -248,11 +247,11 @@ const svgRef =  React.useRef(null);
                            transform="translate(0, 0)"
                           width="100%"
                           height={255}
-                          style={{ maxWidth: 818 }}
+                          style={{ maxWidth: '100%' }}
                           viewBox="0 0 818 255"
                           preserveAspectRatio="xMidYMid meet"
                         >
-                          <foreignObject x={0} y={0} width={818} height={255}>
+                          <foreignObject x={0} y={0} width="100%" height={255}>
                             <style
                               type="text/css"
                               dangerouslySetInnerHTML={{
@@ -268,7 +267,7 @@ const svgRef =  React.useRef(null);
                             <defs>
                               <clipPath id="gridRectMaskmkg8bufr">
                                 <rect
-                                  width={824}
+                                  width="100%"
                                   height={229}
                                   x={-3}
                                   y={-3}
@@ -283,7 +282,7 @@ const svgRef =  React.useRef(null);
                               </clipPath>
                               <clipPath id="gridRectBarMaskmkg8bufr">
                                 <rect
-                                  width={824}
+                                  width="100%"
                                   height={229}
                                   x={-3}
                                   y={-3}
@@ -298,7 +297,7 @@ const svgRef =  React.useRef(null);
                               </clipPath>
                               <clipPath id="gridRectMarkerMaskmkg8bufr">
                                 <rect
-                                  width={824}
+                                  width="100%"
                                   height={223}
                                   x={-3}
                                   y={0}
@@ -942,7 +941,7 @@ const svgRef =  React.useRef(null);
         </div>
       </div>
       {/* Schedules */}
-      <div className="col-12 col-lg-4 col-xxl-4 d-flex">
+      <div className="col-12 col-lg-4 col-xxl-4 d-flex" style={{ maxWidth: '100%', overflow: 'hidden' }}>
         <div className="card flex-fill">
           <div className="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
             <h4 className="card-title">Schedules</h4>
@@ -1706,11 +1705,11 @@ const svgRef =  React.useRef(null);
             </div>
           </div>
           <div className="card-body pb-0">
-            <div id="performance_chart" style={{ minHeight: 370, overflowX: 'auto' }}>
+            <div id="performance_chart" style={{ minHeight: 370, width: '100%', overflow: 'hidden' }}>
               <div
                 id="apexcharts5jqn6trlk"
                 className="apexcharts-canvas apexcharts5jqn6trlk apexcharts-theme-light"
-                style={{ width: '100%', maxWidth: 818, height: 355, margin: '0 auto' }}
+                style={{ width: '100%', maxWidth: '100%', height: 355, margin: '0 auto' }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1720,11 +1719,11 @@ const svgRef =  React.useRef(null);
                   transform="translate(0, 0)"
                   width="100%"
                   height={355}
-                  style={{ maxWidth: 818 }}
+                  style={{ maxWidth: '100%' }}
                   viewBox="0 0 818 355"
                   preserveAspectRatio="xMidYMid meet"
                 >
-                  <foreignObject x={0} y={0} width={818} height={355}>
+                  <foreignObject x={0} y={0} width="100%" height={355}>
                     <style
                       type="text/css"
                       dangerouslySetInnerHTML={{
@@ -3903,11 +3902,11 @@ const svgRef =  React.useRef(null);
                 Eng : 80
               </span>
             </div>
-            <div id="exam-result-chart" style={{ minHeight: 325 }}>
+            <div id="exam-result-chart" style={{ minHeight: 325, width: '100%', overflow: 'hidden' }}>
               <div
                 id="apexchartswed010ob"
                 className="apexcharts-canvas apexchartswed010ob apexcharts-theme-light"
-                style={{ width: '100%', maxWidth: 833, height: 310, margin: '0 auto' }}
+                style={{ width: '100%', maxWidth: '100%', height: 310, margin: '0 auto' }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -3917,11 +3916,11 @@ const svgRef =  React.useRef(null);
                   transform="translate(0, 0)"
                   width="100%"
                   height={310}
-                  style={{ maxWidth: 833 }}
+                  style={{ maxWidth: '100%' }}
                   viewBox="0 0 833 310"
                   preserveAspectRatio="xMidYMid meet"
                 >
-                  <foreignObject x={0} y={0} width={833} height={310}>
+                  <foreignObject x={0} y={0} width="100%" height={310}>
                     <style
                       type="text/css"
                       dangerouslySetInnerHTML={{
@@ -5276,8 +5275,10 @@ const svgRef =  React.useRef(null);
       </div>
       {/* /Todo */}
     </div>
-  </div>
-</div>
+  
+  {/* Add Exam Schedule Modal */}   
+                        
+
 
 
 <div className="modal fade" id="add_exam_schedule">
@@ -5851,10 +5852,9 @@ const svgRef =  React.useRef(null);
       </form>
     </div>
   </div>
-</div>
-
-
-    </div>
+  </div>
+  {/* /Modal */}
+  </div>
   )
 }
 
