@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Sidebar from "./Pages/Sidebar";
 import Tbase from "./teacher-portal/Tbase";
 import TDashboard from "./teacher-portal/TDashboard";
+import SDashboard from "./student-portal/SDashboard";
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
           <Route path='/' element={<Base><Home/></Base>} />
           <Route path='/side-bar' element={<Base><Sidebar/></Base>} />
                     <Route path='/teacher-portal' element={<Base><TDashboard/></Base>} />
+                                        <Route path='/student-portal' element={<Base><SDashboard/></Base>} />
+
  
 
 
